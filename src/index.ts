@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import db from "./server/db";
-import webtoonRouter from "./controller/webtoon.controller";
+import webtoonRouter from "./controllers/webtoon.controller";
 
 dotenv.config();
 
