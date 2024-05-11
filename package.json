@@ -1,7 +1,11 @@
 {
-  "type": "module",
+  "name": "weeboon-server",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "type": "commonjs",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "tsc && node dist/index.ts",
+    "dev": "nodemon - exec 'ts-node' src/index.ts",
     "prepare": "husky",
     "uninstall-husky": "npm uninstall husky --no-save && git config --unset core.hooksPath && npx rimraf .husky",
     "lint": "eslint . --ext .ts",
@@ -29,7 +33,9 @@
     "stylelint-config-recommended": "^14.0.0",
     "stylelint-config-sass-guidelines": "^11.0.0",
     "stylelint-order": "^6.0.4",
-    "stylelint-prettier": "^5.0.0"
+    "stylelint-prettier": "^5.0.0",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
