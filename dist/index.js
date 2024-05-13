@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const db_1 = __importDefault(require("./server/db"));
-const webtoon_controller_1 = __importDefault(require("./controllers/webtoon.controller"));
+const webtoon_route_1 = __importDefault(require("./routes/webtoon.route"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT || 8080;
@@ -17,6 +17,6 @@ app.use(express_1.default.json());
 app.get("/", function (req, res) {
     res.send("connected to weeboon server!");
 });
-app.use(webtoon_controller_1.default);
+app.use(webtoon_route_1.default);
 app.listen(port);
 //# sourceMappingURL=index.js.map

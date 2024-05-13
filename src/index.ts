@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import db from "./server/db";
-import webtoonRouter from "./controllers/webtoon.controller";
+import webtoonRouter from "./webtoon/webtoon.route";
 
 dotenv.config();
 
@@ -14,7 +14,7 @@ db();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", function (req, res) {
+app.get("/", function (_, res) {
   res.send("connected to weeboon server!");
 });
 
